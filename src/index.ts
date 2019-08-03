@@ -3,3 +3,5 @@
  * @namespace Horizon
  * @description Index
  */
+
+export * from "./horizon";

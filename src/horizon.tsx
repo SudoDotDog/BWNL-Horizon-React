@@ -4,7 +4,9 @@
  * @description Horizon
  */
 
+import { mergeClasses } from "@sudoo/jss";
 import * as React from "react";
+import { horizonStyle } from "./style/horizon";
 
 export type HorizonProps = {
 
@@ -15,11 +17,17 @@ export class Horizon extends React.Component<HorizonProps> {
 
     private _div: HTMLDivElement | null = null;
 
+    private readonly _horizonStyle = horizonStyle.use();
+
     public constructor(props: HorizonProps) {
 
         super(props);
 
+        console.log(this._horizonStyle);
+
+        this._mountRef = this._mountRef.bind(this);
         this._handleNormalMode = this._handleNormalMode.bind(this);
+        this._handleAggressiveMode = this._handleAggressiveMode.bind(this);
     }
 
     public componentWillUnmount() {
@@ -32,19 +40,25 @@ export class Horizon extends React.Component<HorizonProps> {
     public render() {
 
         return (<div
-            className={this.props.className}
-            ref={(ref: HTMLDivElement) => {
-                if (this._div) {
-                    return;
-                }
-                if (ref) {
-                    this._div = ref;
-                    ref.addEventListener('wheel', this._handleNormalMode);
-                }
-            }}
+            className={mergeClasses(
+                this._horizonStyle.wrapper,
+                this.props.className,
+            )}
+            ref={this._mountRef}
         >
             {this.props.children}
         </div>);
+    }
+
+    private _mountRef(ref: HTMLDivElement) {
+
+        if (this._div) {
+            return;
+        }
+        if (ref) {
+            this._div = ref;
+            ref.addEventListener('wheel', this._handleNormalMode);
+        }
     }
 
     private _handleNormalMode(e: WheelEvent) {
