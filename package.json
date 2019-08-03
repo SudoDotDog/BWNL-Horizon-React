@@ -1,0 +1,37 @@
+{
+  "name": "@bwnl/react-horizon",
+  "version": "1.3.1",
+  "description": ":sunrise: Horizontal Scroll Bar",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SudoDotDog/BWNL-Horizon-React.git"
+  },
+  "author": "WMXPY",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SudoDotDog/BWNL-Horizon-React/issues"
+  },
+  "homepage": "https://github.com/SudoDotDog/BWNL-Horizon-React#readme",
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*"
+  },
+  "dependencies": {
+    "jss": "^10.0.0-alpha.21",
+    "jss-preset-default": "^10.0.0-alpha.21"
+  },
+  "devDependencies": {
+    "@sudoo/io": "^1.6.0",
+    "@sudoo/mock": "^1.2.0",
+    "@sudoo/react-force": "^1.5.0",
+    "@sudoo/react-force-dev": "^1.5.0",
+    "@sudoo/triforce": "^1.6.0",
+    "@types/jss": "^9.5.8",
+    "docz": "^1.2.0",
+    "docz-theme-default": "^1.2.0"
+  }
+}
