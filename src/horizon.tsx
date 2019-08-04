@@ -23,8 +23,6 @@ export class Horizon extends React.Component<HorizonProps> {
 
         super(props);
 
-        console.log(this._horizonStyle);
-
         this._mountRef = this._mountRef.bind(this);
         this._handleNormalMode = this._handleNormalMode.bind(this);
         this._handleAggressiveMode = this._handleAggressiveMode.bind(this);
