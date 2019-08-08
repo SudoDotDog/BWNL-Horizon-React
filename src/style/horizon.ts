@@ -14,4 +14,4 @@ const horizonStyleBase: JSSStyle = {
     },
 };
 
-export const horizonStyle: StyleManager = StyleManager.create(horizonStyleBase, 'Horizon');
+export const horizonStyle: StyleManager = StyleManager.create(horizonStyleBase, 'Horizon').setPrefix('BWNL-Horizon-');
