@@ -10,6 +10,7 @@ import { horizonStyle } from "./style/horizon";
 
 export type HorizonProps = {
 
+    readonly style?: React.CSSProperties;
     readonly className?: string;
     readonly flex?: boolean;
     readonly scroll?: boolean;
@@ -46,6 +47,7 @@ export class Horizon extends React.Component<HorizonProps> {
                 assertIfTrue(this.props.flex, this._horizonStyle.flex),
                 this.props.className,
             )}
+            style={this.props.style}
             ref={this._mountRef}
         >
             {this.props.children}
