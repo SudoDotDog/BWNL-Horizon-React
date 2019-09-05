@@ -1,6 +1,6 @@
 {
   "name": "@bwnl/react-horizon",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": ":sunrise: Horizontal Scroll Bar",
   "main": "index.js",
   "directories": {
