@@ -4,13 +4,15 @@
  * @description Horizon
  */
 
-import { mergeClasses } from "@sudoo/jss";
+import { assertIfTrue, mergeClasses } from "@sudoo/jss";
 import * as React from "react";
 import { horizonStyle } from "./style/horizon";
 
 export type HorizonProps = {
 
     readonly className?: string;
+    readonly flex?: boolean;
+    readonly scroll?: boolean;
 };
 
 export class Horizon extends React.Component<HorizonProps> {
@@ -40,6 +42,8 @@ export class Horizon extends React.Component<HorizonProps> {
         return (<div
             className={mergeClasses(
                 this._horizonStyle.wrapper,
+                assertIfTrue(this.props.scroll, this._horizonStyle.scroll),
+                assertIfTrue(this.props.flex, this._horizonStyle.flex),
                 this.props.className,
             )}
             ref={this._mountRef}

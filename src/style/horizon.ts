@@ -12,6 +12,14 @@ const horizonStyleBase: JSSStyle = {
 
         overflow: 'auto',
     },
+    scroll: {
+
+        overflowX: 'scroll',
+    },
+    flex: {
+
+        display: 'flex',
+    },
 };
 
 export const horizonStyle: StyleManager = StyleManager.create(horizonStyleBase, 'Horizon').setPrefix('BWNL-Horizon-');
