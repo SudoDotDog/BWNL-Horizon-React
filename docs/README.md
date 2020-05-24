@@ -6,3 +6,19 @@
 [![downloads](https://img.shields.io/npm/dm/@bwnl/react-horizon.svg)](https://www.npmjs.com/package/@bwnl/react-horizon)
 
 :sunrise: Horizontal Scroll Bar
+
+## Install
+
+```sh
+yarn add @bwnl/react-horizon
+# Or
+npm install @bwnl/react-horizon
+```
+
+## Demo
+
+![Demo](https://user-images.githubusercontent.com/5085821/82339580-d0d46e80-99b3-11ea-9b98-9dd13be54179.gif)
+
+## Examples
+
+-   [StoryBook Examples](https://github.com/SudoDotDog/BWNL-Horizon-React/tree/master/stories)
