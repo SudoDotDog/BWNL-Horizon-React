@@ -79,7 +79,7 @@ export class Horizon extends React.Component<HorizonProps> {
         e.stopPropagation();
 
         this._div.scrollTo({
-            left: this._div.scrollLeft + e.deltaY,
+            left: Number(this._div.scrollLeft) + Number(e.deltaY),
         });
     }
 
@@ -90,7 +90,7 @@ export class Horizon extends React.Component<HorizonProps> {
         }
 
         if (e.deltaY >= 0) {
-            if (this._div.scrollLeft + this._div.clientWidth === this._div.scrollWidth) {
+            if (Number(this._div.scrollLeft) + Number(this._div.clientWidth) === this._div.scrollWidth) {
                 return;
             }
         } else {
@@ -103,7 +103,7 @@ export class Horizon extends React.Component<HorizonProps> {
         e.stopPropagation();
 
         this._div.scrollTo({
-            left: this._div.scrollLeft + e.deltaY,
+            left: Number(this._div.scrollLeft) + Number(e.deltaY),
         });
     }
 }
