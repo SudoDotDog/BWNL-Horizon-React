@@ -48,12 +48,16 @@ lint-fix:
 	--config ./typescript/.eslintrc.json --fix
 
 install:
-	@echo "[INFO] Installing dev Dependencies"
+	@echo "[INFO] Installing Development Dependencies"
 	@yarn install --production=false
 
 license: clean
 	@echo "[INFO] Sign files"
 	@NODE_ENV=development $(ts_node) script/license.ts
+
+outdated: install
+	@echo "[INFO] Checking Outdated Dependencies"
+	@yarn outdated
 
 clean: clean-linux
 	@echo "[INFO] Cleaning release files"
